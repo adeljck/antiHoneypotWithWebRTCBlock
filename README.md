@@ -1,6 +1,8 @@
-# AntiHoneypot - 一个拦截XSSI & 识别Web蜜罐的Chrome扩展
+# AntiHoneypotWithWebRTCBlock - 一个拦截XSSI & 识别Web蜜罐的Chrome扩展,增加了webrtc关闭功能
 ## 说明
 这是一个带有学习和研究性质的Chrome扩展程序。
+fork自项目https://github.com/Monyer/antiHoneypot,本人只是在这个项目的基础上做了webrtc的缝合.感谢大佬.
+webrtc关闭功能参考了项目https://github.com/aghorler/WebRTC-Leak-Prevent.
 
 ## 功能
 1. 截获页面中发起的XSSI请求，通过域名、URI、Query黑名单特征识别阻断可疑的XSSI（Jsonp Callback、XSS等）
@@ -13,6 +15,7 @@
 8. 判断页面中是否对剪贴板的粘贴进行了取值（待进一步验证，目前没发现不粘贴就能取值的利用方式）
 9. 一键清除当前网站的所有浏览器数据功能（包括所有缓存的数据、存储的信息）
 10. 增加了对Obfuscator混淆脚本的识别（很多蜜罐用在代码混淆上）
+11. WebRTC关闭
 
 ## 声明
 
@@ -33,3 +36,7 @@
 * 大家如果有Bug反馈、新功能建议，请直接发到issue。
 * 如果遇到新的蜜罐，请打开新的chrome的无痕模式，然后打开“开发者工具”，切换到“Network”标签，选中“disable cache”，然后请求或刷新页面。待页面完全加载完成后，右键选择“Save all as HAR with content”生成HAR文件发到issue即可（如果比较大，压缩成zip上传）。
 * 如果遇到页面包含反调试功能，切换到“开发者工具”的“Source”标签，点击右上的“Deactivate breakpoints”按钮，再点击“Resume script execution”按钮即可。注：有些反调试功能会通过死循环耗尽浏览器资源，所以如果发现页面卡了，抓完包关闭当前标签即可
+
+## 感谢
+* https://github.com/Monyer/antiHoneypot
+* https://github.com/aghorler/WebRTC-Leak-Prevent
