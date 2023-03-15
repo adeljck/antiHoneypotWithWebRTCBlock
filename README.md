@@ -1,7 +1,7 @@
 # AntiHoneypotWithWebRTCBlock - 一个拦截XSSI & 识别Web蜜罐的Chrome扩展,增加了webrtc关闭功能
 ## 说明
 这是一个带有学习和研究性质的Chrome扩展程序。
-fork自项目https://github.com/Monyer/antiHoneypot,本人只是在这个项目的基础上做了webrtc的缝合.感谢大佬.
+fork自项目https://github.com/Monyer/antiHoneypot ,本人只是在这个项目的基础上做了webrtc的缝合.感谢大佬.
 webrtc关闭功能参考了项目https://github.com/aghorler/WebRTC-Leak-Prevent.
 
 ## 功能
